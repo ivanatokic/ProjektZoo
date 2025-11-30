@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\zoo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\zoo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\zoo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\zoo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\controllers\\jedinkacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\controllers\\jedinkacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -55,24 +71,12 @@
       "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\controllers\\nastambacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\zoo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\zoo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\data\\zoocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\data\\zoocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\models\\zooloski.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\models\\zooloski.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\models\\incident.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -121,10 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\models\\incidentnastamba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\models\\incidentnastamba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|c:\\users\\ivana\\projekt_pi\\zoo\\zoo\\zoo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{9FB3CFED-FCA8-7417-F686-8E8CB763D888}|Zoo\\Zoo.csproj|solutionrelative:zoo\\zoo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -134,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -142,43 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IncidentController.cs",
-              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\IncidentController.cs",
-              "RelativeDocumentMoniker": "Zoo\\Controllers\\IncidentController.cs",
-              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\IncidentController.cs",
-              "RelativeToolTip": "Zoo\\Controllers\\IncidentController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowEcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T12:51:05.385Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TuraController.cs",
-              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\TuraController.cs",
-              "RelativeDocumentMoniker": "Zoo\\Controllers\\TuraController.cs",
-              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\TuraController.cs",
-              "RelativeToolTip": "Zoo\\Controllers\\TuraController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAowEUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T12:50:38.648Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ObavezaController.cs",
-              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\ObavezaController.cs",
-              "RelativeDocumentMoniker": "Zoo\\Controllers\\ObavezaController.cs",
-              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\ObavezaController.cs",
-              "RelativeToolTip": "Zoo\\Controllers\\ObavezaController.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAowEkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T12:50:10.916Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "SkupinaController.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\SkupinaController.cs",
               "RelativeDocumentMoniker": "Zoo\\Controllers\\SkupinaController.cs",
@@ -190,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "VrstaController.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\VrstaController.cs",
               "RelativeDocumentMoniker": "Zoo\\Controllers\\VrstaController.cs",
@@ -198,12 +162,11 @@
               "RelativeToolTip": "Zoo\\Controllers\\VrstaController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAowBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T12:46:15.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T12:46:15.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "JedinkaController.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\JedinkaController.cs",
               "RelativeDocumentMoniker": "Zoo\\Controllers\\JedinkaController.cs",
@@ -216,7 +179,94 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Zoo",
+              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Zoo.csproj",
+              "RelativeDocumentMoniker": "Zoo\\Zoo.csproj",
+              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Zoo.csproj",
+              "RelativeToolTip": "Zoo\\Zoo.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-30T12:37:11.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Program.cs",
+              "RelativeDocumentMoniker": "Zoo\\Program.cs",
+              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Program.cs",
+              "RelativeToolTip": "Zoo\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T12:30:33.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\appsettings.json",
+              "RelativeDocumentMoniker": "Zoo\\appsettings.json",
+              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\appsettings.json",
+              "RelativeToolTip": "Zoo\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-30T12:19:15.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Zoo.csproj",
+              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Zoo.csproj",
+              "RelativeDocumentMoniker": "Zoo\\Zoo.csproj",
+              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Zoo.csproj",
+              "RelativeToolTip": "Zoo\\Zoo.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-30T12:16:51.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ObavezaController.cs",
+              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\ObavezaController.cs",
+              "RelativeDocumentMoniker": "Zoo\\Controllers\\ObavezaController.cs",
+              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\ObavezaController.cs",
+              "RelativeToolTip": "Zoo\\Controllers\\ObavezaController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAowEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T12:50:10.916Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TuraController.cs",
+              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\TuraController.cs",
+              "RelativeDocumentMoniker": "Zoo\\Controllers\\TuraController.cs",
+              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\TuraController.cs",
+              "RelativeToolTip": "Zoo\\Controllers\\TuraController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAowEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T12:50:38.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IncidentController.cs",
+              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\IncidentController.cs",
+              "RelativeDocumentMoniker": "Zoo\\Controllers\\IncidentController.cs",
+              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\IncidentController.cs",
+              "RelativeToolTip": "Zoo\\Controllers\\IncidentController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T12:51:05.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IncidentZivotinjaController.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\IncidentZivotinjaController.cs",
               "RelativeDocumentMoniker": "Zoo\\Controllers\\IncidentZivotinjaController.cs",
@@ -228,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "IncidentNastambaController.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\IncidentNastambaController.cs",
               "RelativeDocumentMoniker": "Zoo\\Controllers\\IncidentNastambaController.cs",
@@ -240,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "RasporedController.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\RasporedController.cs",
               "RelativeDocumentMoniker": "Zoo\\Controllers\\RasporedController.cs",
@@ -252,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "ZooloskiController.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\ZooloskiController.cs",
               "RelativeDocumentMoniker": "Zoo\\Controllers\\ZooloskiController.cs",
@@ -264,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "ObrazovanjeController.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\ObrazovanjeController.cs",
               "RelativeDocumentMoniker": "Zoo\\Controllers\\ObrazovanjeController.cs",
@@ -276,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "RadnikController.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\RadnikController.cs",
               "RelativeDocumentMoniker": "Zoo\\Controllers\\RadnikController.cs",
@@ -288,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "NastambaController.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Controllers\\NastambaController.cs",
               "RelativeDocumentMoniker": "Zoo\\Controllers\\NastambaController.cs",
@@ -300,30 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Zoo",
-              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Zoo.csproj",
-              "RelativeDocumentMoniker": "Zoo\\Zoo.csproj",
-              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Zoo.csproj",
-              "RelativeToolTip": "Zoo\\Zoo.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-30T12:37:11.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Program.cs",
-              "RelativeDocumentMoniker": "Zoo\\Program.cs",
-              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Program.cs",
-              "RelativeToolTip": "Zoo\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T12:30:33.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "ZooContext.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Data\\ZooContext.cs",
               "RelativeDocumentMoniker": "Zoo\\Data\\ZooContext.cs",
@@ -335,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Tura.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\Tura.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\Tura.cs",
@@ -347,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Obaveza.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\Obaveza.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\Obaveza.cs",
@@ -359,19 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\appsettings.json",
-              "RelativeDocumentMoniker": "Zoo\\appsettings.json",
-              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\appsettings.json",
-              "RelativeToolTip": "Zoo\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-30T12:19:15.553Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Incident.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\Incident.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\Incident.cs",
@@ -383,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Zooloski.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\Zooloski.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\Zooloski.cs",
@@ -395,7 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Skupina.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\Skupina.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\Skupina.cs",
@@ -407,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Vrsta.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\Vrsta.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\Vrsta.cs",
@@ -419,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Raspored.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\Raspored.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\Raspored.cs",
@@ -431,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "Radnik.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\Radnik.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\Radnik.cs",
@@ -443,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "Obrazovanje.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\Obrazovanje.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\Obrazovanje.cs",
@@ -455,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Nastamba.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\Nastamba.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\Nastamba.cs",
@@ -467,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "Jedinka.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\Jedinka.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\Jedinka.cs",
@@ -479,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "IncidentZivotinja.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\IncidentZivotinja.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\IncidentZivotinja.cs",
@@ -491,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "IncidentNastamba.cs",
               "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Models\\IncidentNastamba.cs",
               "RelativeDocumentMoniker": "Zoo\\Models\\IncidentNastamba.cs",
@@ -500,18 +515,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-30T12:20:20.244Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Zoo.csproj",
-              "DocumentMoniker": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Zoo.csproj",
-              "RelativeDocumentMoniker": "Zoo\\Zoo.csproj",
-              "ToolTip": "C:\\Users\\ivana\\Projekt_PI\\Zoo\\Zoo\\Zoo.csproj",
-              "RelativeToolTip": "Zoo\\Zoo.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-30T12:16:51.237Z"
             }
           ]
         }
