@@ -121,6 +121,37 @@ CREATE TABLE IncidentZivotinja (
     ID_vrste INT FOREIGN KEY REFERENCES Vrsta(ID_vrste)
 );
 
+CREATE TABLE Troskovi
+(
+    ID_troska INT IDENTITY(1,1) NOT NULL,
+    
+    ID_jedinke INT NULL,
+    ID_skupine INT NULL,
+
+    kategorija NVARCHAR(50) NOT NULL,
+    iznos DECIMAL(10,2) NOT NULL,
+    datum DATETIME2 NOT NULL,
+    opis NVARCHAR(255) NULL,
+
+    CONSTRAINT PK_Troskovi PRIMARY KEY (ID_troska),
+
+    CONSTRAINT FK_Troskovi_Jedinka 
+        FOREIGN KEY (ID_jedinke) REFERENCES Jedinka(ID_jedinke),
+
+    CONSTRAINT FK_Troskovi_Skupina 
+        FOREIGN KEY (ID_skupine) REFERENCES Skupina(ID_skupine),
+
+    CONSTRAINT CK_Troskovi_Iznos_Positive 
+        CHECK (iznos >= 0),
+
+    CONSTRAINT CK_Troskovi_JedinkaIliSkupina 
+        CHECK (
+            (ID_jedinke IS NOT NULL AND ID_skupine IS NULL)
+            OR
+            (ID_jedinke IS NULL AND ID_skupine IS NOT NULL)
+        )
+);
+
 
 ALTER TABLE DimenzijaOblika
 ADD CONSTRAINT CHK_Dimenzija_PozitivnaDuljina
