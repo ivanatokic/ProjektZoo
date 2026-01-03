@@ -11,6 +11,8 @@ builder.Services.AddDbContext<ZooContext>(options =>
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<CostsService>();
+builder.Services.AddScoped<WorkerValidationService>();
 
 var app = builder.Build();
 

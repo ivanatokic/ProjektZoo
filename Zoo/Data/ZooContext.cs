@@ -22,6 +22,7 @@ public class ZooContext : DbContext
     public DbSet<Tura> Tura { get; set; } = null!;
     public DbSet<Vrsta> Vrsta { get; set; } = null!;
     public DbSet<Zooloski> Zooloski { get; set; } = null!;
+    public DbSet<Trosak> Troskovi { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
