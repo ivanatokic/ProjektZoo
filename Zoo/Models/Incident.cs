@@ -1,8 +1,12 @@
-﻿namespace Zoo.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Zoo.Models;
 
 public class Incident
 {
+    [Key]
     public int ID_incidenta { get; set; }
+
     public DateTime datum { get; set; }
     public string? opis { get; set; }
     public int? razina_zivotinje { get; set; }
