@@ -1909,6 +1909,52 @@
         }
       }
     },
+    "/api/Troskovi/Izracun/{id}": {
+      "get": {
+        "tags": [
+          "Troskovi"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Troskovi/Najskuplje": {
+      "get": {
+        "tags": [
+          "Troskovi"
+        ],
+        "parameters": [
+          {
+            "name": "top",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 5
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Tura": {
       "get": {
         "tags": [
@@ -2320,6 +2366,31 @@
   },
   "components": {
     "schemas": {
+      "DimenzijaOblika": {
+        "type": "object",
+        "properties": {
+          "iD_dimenzije": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "iD_oblika": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "redni_broj": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "duljina": {
+            "type": "number",
+            "format": "double"
+          },
+          "oblik": {
+            "$ref": "#/components/schemas/Oblik"
+          }
+        },
+        "additionalProperties": false
+      },
       "Incident": {
         "type": "object",
         "properties": {
@@ -2460,6 +2531,13 @@
               "$ref": "#/components/schemas/Obaveza"
             },
             "nullable": true
+          },
+          "troskovi": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Trosak"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2483,9 +2561,13 @@
             "type": "string",
             "nullable": true
           },
-          "geometrija": {
-            "type": "string",
+          "iD_oblika": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
+          },
+          "oblik": {
+            "$ref": "#/components/schemas/Oblik"
           },
           "jedinke": {
             "type": "array",
@@ -2566,6 +2648,39 @@
         },
         "additionalProperties": false
       },
+      "Oblik": {
+        "type": "object",
+        "properties": {
+          "iD_oblika": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "naziv": {
+            "type": "string",
+            "nullable": true
+          },
+          "broj_stranica": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "dimenzije": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DimenzijaOblika"
+            },
+            "nullable": true
+          },
+          "nastambe": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Nastamba"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Obrazovanje": {
         "type": "object",
         "properties": {
@@ -2629,17 +2744,17 @@
           "zoo": {
             "$ref": "#/components/schemas/Zooloski"
           },
-          "rasporedi": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Raspored"
-            },
-            "nullable": true
-          },
           "obaveze": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/Obaveza"
+            },
+            "nullable": true
+          },
+          "rasporedi": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Raspored"
             },
             "nullable": true
           },
@@ -2736,6 +2851,55 @@
               "$ref": "#/components/schemas/Obaveza"
             },
             "nullable": true
+          },
+          "troskovi": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Trosak"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Trosak": {
+        "type": "object",
+        "properties": {
+          "iD_troska": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "iD_jedinke": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "iD_skupine": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "kategorija": {
+            "type": "string",
+            "nullable": true
+          },
+          "iznos": {
+            "type": "number",
+            "format": "double"
+          },
+          "datum": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "opis": {
+            "type": "string",
+            "nullable": true
+          },
+          "jedinka": {
+            "$ref": "#/components/schemas/Jedinka"
+          },
+          "skupina": {
+            "$ref": "#/components/schemas/Skupina"
           }
         },
         "additionalProperties": false
@@ -2872,6 +3036,9 @@
     },
     {
       "name": "Skupina"
+    },
+    {
+      "name": "Troskovi"
     },
     {
       "name": "Tura"
