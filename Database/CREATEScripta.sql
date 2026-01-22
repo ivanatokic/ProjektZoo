@@ -89,7 +89,7 @@ CREATE TABLE Raspored (
     ID_rasporeda INT IDENTITY(1,1) PRIMARY KEY,
     ID_radnika INT NOT NULL FOREIGN KEY REFERENCES Radnik(ID_radnika),
     datum DATE NOT NULL,
-    smjena CHAR(1) CHECK (smjena IN ('I','II')),
+    smjena CHAR(2) CHECK (smjena IN ('I','II')),
     status NVARCHAR(20) CHECK (status IN ('radi','slobodan'))
 );
 
