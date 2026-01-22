@@ -1,8 +1,12 @@
-﻿namespace Zoo.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Zoo.Models;
 
 public class Vrsta
 {
+    [Key]
     public int ID_vrste { get; set; }
+
     public string hr_naziv { get; set; } = null!;
     public string lat_naziv { get; set; } = null!;
 
@@ -10,4 +14,3 @@ public class Vrsta
     public ICollection<Skupina> Skupine { get; set; } = new List<Skupina>();
     public ICollection<IncidentZivotinja> IncidentZivotinje { get; set; } = new List<IncidentZivotinja>();
 }
-
