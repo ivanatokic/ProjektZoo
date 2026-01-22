@@ -1,8 +1,12 @@
-﻿namespace Zoo.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Zoo.Models;
 
 public class Obaveza
 {
+    [Key]
     public int ID_obaveze { get; set; }
+
     public string naziv { get; set; } = null!;
     public string? opis { get; set; }
     public string? status { get; set; }
@@ -16,4 +20,3 @@ public class Obaveza
     public Jedinka? Jedinka { get; set; }
     public Skupina? Skupina { get; set; }
 }
-
