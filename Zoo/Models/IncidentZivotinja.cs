@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography;
-
-namespace Zoo.Models;
+﻿namespace Zoo.Models;
 
 public class IncidentZivotinja
 {
