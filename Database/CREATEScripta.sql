@@ -12,25 +12,15 @@ CREATE TABLE Zooloski (
     radno_vrijeme INT
 );
 
-CREATE TABLE Oblik (
-    ID_oblika INT PRIMARY KEY IDENTITY(1,1),
-    naziv VARCHAR(50) NOT NULL,         
-    broj_stranica INT NULL              
-);
-
-CREATE TABLE DimenzijaOblika (
-    ID_dimenzije INT PRIMARY KEY IDENTITY(1,1),
-    ID_oblika INT NOT NULL FOREIGN KEY REFERENCES Oblik(ID_oblika),
-    redni_broj INT NOT NULL,            
-    duljina FLOAT NOT NULL              
-);
-
-CREATE TABLE Nastamba (
+CREATE TABLE dbo.Nastamba
+(
     ID_nastambe INT IDENTITY(1,1) PRIMARY KEY,
-    oznaka NVARCHAR(20) NOT NULL,
-    opis NVARCHAR(MAX),
-    sjenčenje NVARCHAR(50),
-    ID_oblika INT NULL FOREIGN KEY REFERENCES Oblik(ID_oblika)
+    Oznaka     NVARCHAR(20) NOT NULL,
+    opis       NVARCHAR(MAX),
+    sijencenje NVARCHAR(50),
+    Oblik      GEOMETRY NOT NULL,
+    Koordinate GEOMETRY NULL,
+    Povrsina_m2 AS (Oblik.STArea()) PERSISTED
 );
 
 CREATE TABLE Jedinka (
@@ -152,15 +142,14 @@ CREATE TABLE Troskovi
         )
 );
 
+ALTER TABLE dbo.Incident
+ADD
+    radovi_sanacije      NVARCHAR(MAX) NULL,
+    ID_radnika_sanacije  INT NULL,
+    datum_sanacije       DATE NULL,
+    CONSTRAINT FK_Incident_RadnikSanacija
+        FOREIGN KEY (ID_radnika_sanacije) REFERENCES dbo.Radnik(ID_radnika);
 
-ALTER TABLE DimenzijaOblika
-ADD CONSTRAINT CHK_Dimenzija_PozitivnaDuljina
-CHECK (duljina > 0);
 
-ALTER TABLE Oblik
-ADD CONSTRAINT CHK_Oblik_BrojStranica
-CHECK (broj_stranica IS NULL OR broj_stranica >= 3);
-
-ALTER TABLE DimenzijaOblika
-ADD CONSTRAINT CHK_Dimenzija_RedniBroj
-CHECK (redni_broj >= 1);
+ALTER TABLE dbo.Skupina
+ADD aktivna BIT NOT NULL CONSTRAINT DF_Skupina_aktivna DEFAULT(1);

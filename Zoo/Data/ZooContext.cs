@@ -24,8 +24,6 @@ public class ZooContext : DbContext
     public DbSet<Zooloski> Zooloski { get; set; } = null!;
     public DbSet<Trosak> Troskovi { get; set; } = null!;
 
-    public DbSet<Oblik> Oblik { get; set; } = null!;
-    public DbSet<DimenzijaOblika> DimenzijaOblika { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -37,15 +35,13 @@ public class ZooContext : DbContext
         modelBuilder.Entity<IncidentZivotinja>()
             .HasKey(x => new { x.ID_incidenta, x.ID_vrste });
 
-        modelBuilder.Entity<DimenzijaOblika>()
-            .HasOne(d => d.Oblik)
-            .WithMany(o => o.Dimenzije)
-            .HasForeignKey(d => d.ID_oblika);
+        modelBuilder.Entity<Nastamba>()
+            .Property(n => n.oblik)
+            .HasColumnType("geometry");
 
         modelBuilder.Entity<Nastamba>()
-            .HasOne(n => n.Oblik)
-            .WithMany(o => o.Nastambe)
-            .HasForeignKey(n => n.ID_oblika);
+            .Property(n => n.koordinate)
+            .HasColumnType("geometry");
 
         modelBuilder.Entity<Jedinka>()
             .HasOne(j => j.Vrsta)
@@ -133,6 +129,13 @@ public class ZooContext : DbContext
         modelBuilder.Entity<Incident>()
             .Property(x => x.trosak_popravka)
             .HasPrecision(10, 2);
+
+        modelBuilder.Entity<Incident>()
+            .HasOne(i => i.RadnikSanacije)
+            .WithMany()
+            .HasForeignKey(i => i.ID_radnika_sanacije)
+            .OnDelete(DeleteBehavior.SetNull);
+
 
         modelBuilder.Entity<Trosak>()
             .Property(x => x.iznos)
