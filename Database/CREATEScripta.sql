@@ -153,3 +153,15 @@ ADD
 
 ALTER TABLE dbo.Skupina
 ADD aktivna BIT NOT NULL CONSTRAINT DF_Skupina_aktivna DEFAULT(1);
+
+ALTER TABLE dbo.Jedinka ALTER COLUMN datum_nabavke DATETIME2 NULL;
+ALTER TABLE dbo.Skupina ALTER COLUMN datum_nabavke DATETIME2 NULL;
+
+ALTER TABLE dbo.Obaveza  ALTER COLUMN datum         DATETIME2 NULL;
+
+ALTER TABLE dbo.Raspored ALTER COLUMN datum         DATETIME2 NOT NULL;
+ALTER TABLE dbo.Tura     ALTER COLUMN datum         DATETIME2 NOT NULL;
+
+ALTER TABLE dbo.Incident ALTER COLUMN datum         DATETIME2 NOT NULL;
+ALTER TABLE dbo.Incident ALTER COLUMN datum_sanacije DATETIME2 NULL;
+
