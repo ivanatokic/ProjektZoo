@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using NetTopologySuite.Geometries;
 
 namespace Zoo.Models;
@@ -22,5 +22,6 @@ public class Nastamba
 
     public ICollection<Jedinka> Jedinke { get; set; } = new List<Jedinka>();
     public ICollection<Skupina> Skupine { get; set; } = new List<Skupina>();
+    public ICollection<Predmet> Predmeti { get; set; } = new List<Predmet>();
     public ICollection<IncidentNastamba> IncidentNastambe { get; set; } = new List<IncidentNastamba>();
 }

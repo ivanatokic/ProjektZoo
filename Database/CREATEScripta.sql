@@ -1,4 +1,4 @@
-﻿
+
 CREATE TABLE Vrsta (
     ID_vrste INT IDENTITY(1,1) PRIMARY KEY,
     hr_naziv NVARCHAR(100) NOT NULL,
@@ -45,6 +45,14 @@ CREATE TABLE Skupina (
     datum_nabavke DATE,
     trosak DECIMAL(10,2),
     tip_troska NVARCHAR(20) DEFAULT 'novčano'
+);
+
+CREATE TABLE Predmet (
+    ID_predmeta INT IDENTITY(1,1) PRIMARY KEY,
+    ID_nastambe INT NOT NULL FOREIGN KEY REFERENCES Nastamba(ID_nastambe),
+    tip NVARCHAR(50) NOT NULL,
+    naziv NVARCHAR(100) NULL,
+    opis NVARCHAR(MAX) NULL
 );
 
 CREATE TABLE Obrazovanje (
@@ -154,6 +162,21 @@ ADD
 ALTER TABLE dbo.Skupina
 ADD aktivna BIT NOT NULL CONSTRAINT DF_Skupina_aktivna DEFAULT(1);
 
+ALTER TABLE dbo.Skupina
+ADD primarna BIT NOT NULL CONSTRAINT DF_Skupina_primarna DEFAULT(1);
+
+ALTER TABLE dbo.Skupina
+ADD poveznica NVARCHAR(500) NULL,
+    nacin_nabavke NVARCHAR(50) NULL;
+
+ALTER TABLE dbo.Jedinka
+ADD primarna BIT NOT NULL CONSTRAINT DF_Jedinka_primarna DEFAULT(1);
+
+ALTER TABLE dbo.Jedinka
+ADD broj NVARCHAR(50) NULL,
+    poveznica NVARCHAR(500) NULL,
+    nacin_nabavke NVARCHAR(50) NULL;
+
 ALTER TABLE dbo.Jedinka ALTER COLUMN datum_nabavke DATETIME2 NULL;
 ALTER TABLE dbo.Skupina ALTER COLUMN datum_nabavke DATETIME2 NULL;
 
@@ -161,6 +184,14 @@ ALTER TABLE dbo.Obaveza  ALTER COLUMN datum         DATETIME2 NULL;
 
 ALTER TABLE dbo.Raspored ALTER COLUMN datum         DATETIME2 NOT NULL;
 ALTER TABLE dbo.Tura     ALTER COLUMN datum         DATETIME2 NOT NULL;
+
+ALTER TABLE dbo.Tura
+ADD vrijeme_zavrsetka DATETIME2 NULL,
+    potreban_vodic    BIT NOT NULL CONSTRAINT DF_Tura_potreban_vodic DEFAULT(1),
+    status            NVARCHAR(50) NOT NULL CONSTRAINT DF_Tura_status DEFAULT(N'planirana');
+
+ALTER TABLE dbo.Radnik
+ADD kompetencije NVARCHAR(255) NULL;
 
 ALTER TABLE dbo.Incident ALTER COLUMN datum         DATETIME2 NOT NULL;
 ALTER TABLE dbo.Incident ALTER COLUMN datum_sanacije DATETIME2 NULL;

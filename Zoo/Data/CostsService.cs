@@ -74,4 +74,29 @@ public class CostsService
             .Take(top)
             .ToListAsync();
     }
+
+    /// <summary>Lista troškova za danu jedinku (za prikaz po jedinki).</summary>
+    public async Task<List<Trosak>> TroskoviPoJedinkiListaAsync(int idJedinke)
+    {
+        return await _context.Troskovi
+            .Include(t => t.Jedinka)
+            .Where(t => t.ID_jedinke == idJedinke)
+            .OrderBy(t => t.datum)
+            .ToListAsync();
+    }
+
+    /// <summary>Izračun po kategoriji: ukupno i broj zapisa po svakoj kategoriji.</summary>
+    public async Task<List<IzracunPoKategorijiItemDto>> IzracunPoKategorijiAsync()
+    {
+        return await _context.Troskovi
+            .GroupBy(t => t.kategorija)
+            .Select(g => new IzracunPoKategorijiItemDto
+            {
+                kategorija = g.Key,
+                ukupno = g.Sum(x => x.iznos),
+                broj = g.Count()
+            })
+            .OrderByDescending(x => x.ukupno)
+            .ToListAsync();
+    }
 }

@@ -1,4 +1,4 @@
-﻿-- 1) Vrsta
+-- 1) Vrsta
 INSERT INTO dbo.Vrsta (hr_naziv, lat_naziv)
 VALUES 
 (N'Lav', N'Panthera leo'),
@@ -53,32 +53,32 @@ VALUES
 GO
 
 -- 7) Radnik (pretpostavka: Obrazovanje ID 1..2 i Zooloski ID 1)
-INSERT INTO dbo.Radnik (ime, prezime, kontakt_broj, ID_obrazovanja, tip_radnika, ID_zoo)
+INSERT INTO dbo.Radnik (ime, prezime, kontakt_broj, ID_obrazovanja, tip_radnika, ID_zoo, kompetencije)
 VALUES
-(N'Marko', N'Marković', N'062888999', 1, N'Veterinar', 1),
-(N'Marija', N'Marić', N'063444555', 2, N'Odgajatelj', 1),
-(N'Ana', N'Anić', N'063111222', 2, N'Odgajatelj', 1),
-(N'Petra', N'Petrović', N'063222333', 1, N'Veterinar', 1);
+(N'Marko', N'Marković', N'062888999', 1, N'Veterinar', 1, N'Sisavci, lavovi'),
+(N'Marija', N'Marić', N'063444555', 2, N'Odgajatelj', 1, N'Ptice'),
+(N'Ana', N'Anić', N'063111222', 2, N'Odgajatelj', 1, N'Vodozemci, ribe'),
+(N'Petra', N'Petrović', N'063222333', 1, N'Veterinar', 1, N'Gmazovi, krokodili');
 GO
 
 -- 8) Jedinka (pretpostavka: Vrsta ID 1..5 i Nastamba ID 1..5)
-INSERT INTO dbo.Jedinka (nadimak, ID_vrste, ID_nastambe, opis, datum_nabavke, trosak)
+INSERT INTO dbo.Jedinka (nadimak, broj, ID_vrste, ID_nastambe, opis, datum_nabavke, nacin_nabavke, trosak)
 VALUES
-(N'Leo', 1, 1, N'Mlad lav u nastambi A1', '2025-01-10', 5000),
-(N'Corvus', 2, 2, N'Pametna vrana u nastambi B2', '2025-02-05', 1000),
-(N'Goldie', 3, 3, N'Zlatna ribica u akvariju C1', '2025-03-01', 50),
-(N'Froggy', 4, 4, N'Obična žaba u bazenu D1', '2025-04-01', 20),
-(N'Croc', 5, 5, N'Krokodil u otoku E1', '2025-05-01', 10000);
+(N'Leo', N'1', 1, 1, N'Mlad lav u nastambi A1', '2025-01-10', N'kupljen', 5000),
+(N'Corvus', N'2', 2, 2, N'Pametna vrana u nastambi B2', '2025-02-05', N'kupljen', 1000),
+(N'Goldie', N'3', 3, 3, N'Zlatna ribica u akvariju C1', '2025-03-01', N'kupljen', 50),
+(N'Froggy', N'4', 4, 4, N'Obična žaba u bazenu D1', '2025-04-01', N'kupljen', 20),
+(N'Croc', N'5', 5, 5, N'Krokodil u otoku E1', '2025-05-01', N'kupljen', 10000);
 GO
 
 -- 9) Skupina
-INSERT INTO dbo.Skupina (naziv, ID_vrste, ID_nastambe, prosjecan_broj, opis, datum_nabavke, trosak)
+INSERT INTO dbo.Skupina (naziv, ID_vrste, ID_nastambe, prosjecan_broj, opis, datum_nabavke, nacin_nabavke, trosak)
 VALUES
-(N'Čopor', 1, 1, 3, N'Tri lava u nastambi A1', '2025-01-10', 15000),
-(N'Krd', 2, 2, 5, N'Pet vrana u nastambi B2', '2025-02-05', 2000),
-(N'Jato', 3, 3, 50, N'Pedest zlatnih ribica u akvariju C1', '2025-03-01', 100),
-(N'Vojka', 4, 4, 10, N'Petnaest žaba u bazenu D1', '2025-04-01', 50),
-(N'Banda', 5, 5, 2, N'Dva krokodila u otoku E1', '2025-05-01', 25000);
+(N'Čopor', 1, 1, 3, N'Tri lava u nastambi A1', '2025-01-10', N'kupljen', 15000),
+(N'Krd', 2, 2, 5, N'Pet vrana u nastambi B2', '2025-02-05', N'kupljen', 2000),
+(N'Jato', 3, 3, 50, N'Pedest zlatnih ribica u akvariju C1', '2025-03-01', N'kupljen', 100),
+(N'Vojka', 4, 4, 10, N'Petnaest žaba u bazenu D1', '2025-04-01', N'kupljen', 50),
+(N'Banda', 5, 5, 2, N'Dva krokodila u otoku E1', '2025-05-01', N'kupljen', 25000);
 GO
 
 -- 10) Obaveza
@@ -101,11 +101,11 @@ VALUES
 GO
 
 -- 12) Tura
-INSERT INTO dbo.Tura (datum, broj_posjetitelja, ID_vodica, opis)
+INSERT INTO dbo.Tura (datum, vrijeme_zavrsetka, broj_posjetitelja, ID_vodica, opis, potreban_vodic, status)
 VALUES
-('2025-11-16', 25, 1, N'Obilazak lavova i ptica'),
-('2025-11-16', 15, 3, N'Obilazak vodozemaca i ribica'),
-('2025-11-17', 30, 4, N'Obilazak krokodila i drugih gmazova');
+('2025-11-16 10:00:00', '2025-11-16 12:00:00', 25, 1, N'Obilazak lavova i ptica', 1, N'planirana'),
+('2025-11-16 14:00:00', '2025-11-16 16:00:00', 15, 3, N'Obilazak vodozemaca i ribica', 1, N'dodijeljena'),
+('2025-11-17 09:00:00', '2025-11-17 11:00:00', 30, 4, N'Obilazak krokodila i drugih gmazova', 1, N'planirana');
 GO
 
 -- 13) Incident
@@ -142,6 +142,29 @@ GO
 INSERT INTO dbo.Troskovi (ID_jedinke, ID_skupine, kategorija, iznos, datum, opis)
 VALUES
 (1, NULL, N'Hrana', 250.00, '2025-11-16 09:00:00', N'Hrana za lava'),
+(1, NULL, N'Radni sati osoblja', 40.00, '2025-11-16 12:00:00', N'Hranjenje i čišćenje'),
+(1, NULL, N'Veterinarski pregled', 60.00, '2025-11-17 09:00:00', N'Redovni pregled'),
+(1, NULL, N'Drugo', 25.00, '2025-11-18 08:00:00', N'Ostalo za jedinku 1'),
 (NULL, 2, N'Odrzavanje', 100.00, '2025-11-16 10:00:00', N'Odrzavanje nastambe za vrane'),
-(5, NULL, N'Lijekovi', 75.50, '2025-11-17 11:30:00', N'Lijekovi za krokodila');
+(2, NULL, N'Hrana', 80.00, '2025-11-16 11:00:00', N'Hrana za jedinku 2'),
+(2, NULL, N'Veterinarski pregled', 45.00, '2025-11-17 14:00:00', N'Pregled'),
+(3, NULL, N'Hrana', 120.00, '2025-11-18 10:00:00', N'Hrana za jedinku 3'),
+(3, NULL, N'Radni sati osoblja', 30.00, '2025-11-17 16:00:00', N'Njega'),
+(3, NULL, N'Drugo', 15.00, '2025-11-19 09:00:00', N'Ostalo'),
+(4, NULL, N'Hrana', 20.00, '2025-11-16 13:00:00', N'Hrana za jedinku 4'),
+(4, NULL, N'Veterinarski pregled', 35.00, '2025-11-18 11:00:00', N'Redovni pregled'),
+(5, NULL, N'Lijekovi', 75.50, '2025-11-17 11:30:00', N'Lijekovi za krokodila'),
+(5, NULL, N'Hrana', 300.00, '2025-11-16 09:30:00', N'Hrana za krokodila'),
+(5, NULL, N'Radni sati osoblja', 55.00, '2025-11-18 07:00:00', N'Čišćenje i hranjenje');
+GO
+
+-- 17) Predmet (predmeti u nastambama: stijene, biljke, konstrukcije itd.)
+INSERT INTO dbo.Predmet (ID_nastambe, tip, naziv, opis)
+VALUES
+(1, N'stijena', N'Drvene platforme i stijene', N'Za penjanje i odmor'),
+(1, N'konstrukcija', N'Platforme', NULL),
+(2, N'biljka', N'Grane i grmovi', NULL),
+(3, N'biljka', N'Vodene biljke', N'Filtracija i kisik'),
+(4, N'stijena', N'Kamenje uz jezerce', NULL),
+(5, N'konstrukcija', N'Ograda i kopneni dio', NULL);
 GO

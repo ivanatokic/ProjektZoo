@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Zoo.Data;
 using Zoo.Models;
@@ -21,8 +21,8 @@ public class ObavezaController : ControllerBase
     {
         return await _context.Obaveza
             .Include(o => o.Radnik)
-            .Include(o => o.Jedinka)
-            .Include(o => o.Skupina)
+            .Include(o => o.Jedinka).ThenInclude(j => j!.Vrsta)
+            .Include(o => o.Skupina).ThenInclude(s => s!.Vrsta)
             .ToListAsync();
     }
 
@@ -31,8 +31,8 @@ public class ObavezaController : ControllerBase
     {
         var obaveza = await _context.Obaveza
             .Include(o => o.Radnik)
-            .Include(o => o.Jedinka)
-            .Include(o => o.Skupina)
+            .Include(o => o.Jedinka).ThenInclude(j => j!.Vrsta)
+            .Include(o => o.Skupina).ThenInclude(s => s!.Vrsta)
             .FirstOrDefaultAsync(o => o.ID_obaveze == id);
 
         if (obaveza == null) return NotFound();
@@ -44,8 +44,8 @@ public class ObavezaController : ControllerBase
     {
         var obaveze = await _context.Obaveza
             .Include(o => o.Radnik)
-            .Include(o => o.Jedinka)
-            .Include(o => o.Skupina)
+            .Include(o => o.Jedinka).ThenInclude(j => j!.Vrsta)
+            .Include(o => o.Skupina).ThenInclude(s => s!.Vrsta)
             .Where(o => o.ID_radnika == idRadnika)
             .OrderBy(o => o.datum)
             .ToListAsync();
@@ -60,6 +60,8 @@ public class ObavezaController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Obaveza>> PostObaveza(Obaveza obaveza)
     {
+        NormalizeObavezaFk(obaveza);
+
         // validacija: ako je zadani radnik + datum, provjeri konflikt
         if (obaveza.ID_radnika.HasValue && obaveza.datum.HasValue)
         {
@@ -86,6 +88,8 @@ public class ObavezaController : ControllerBase
     {
         if (id != obaveza.ID_obaveze)
             return BadRequest();
+
+        NormalizeObavezaFk(obaveza);
 
         // validacija: radnik ne smije imati drugu obavezu u isti termin
         if (obaveza.ID_radnika.HasValue && obaveza.datum.HasValue)
@@ -118,6 +122,14 @@ public class ObavezaController : ControllerBase
         await _context.SaveChangesAsync();
 
         return NoContent();
+    }
+
+    /// <summary>ID=0 ruši FK; u bazi moraju biti NULL kad nije odabrano.</summary>
+    private static void NormalizeObavezaFk(Obaveza o)
+    {
+        if (o.ID_jedinke == 0) o.ID_jedinke = null;
+        if (o.ID_skupine == 0) o.ID_skupine = null;
+        if (o.ID_radnika == 0) o.ID_radnika = null;
     }
 }
 

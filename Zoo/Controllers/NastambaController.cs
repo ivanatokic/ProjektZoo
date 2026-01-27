@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Zoo.Data;
 using Zoo.Models;
@@ -20,8 +20,9 @@ public class NastambaController : ControllerBase
     public async Task<ActionResult<IEnumerable<Nastamba>>> GetSveNastambe()
     {
         return await _context.Nastamba
-            .Include(n => n.Jedinke)
-            .Include(n => n.Skupine)
+            .Include(n => n.Jedinke).ThenInclude(j => j.Vrsta)
+            .Include(n => n.Skupine).ThenInclude(s => s.Vrsta)
+            .Include(n => n.Predmeti)
             .ToListAsync();
     }
 
@@ -29,8 +30,9 @@ public class NastambaController : ControllerBase
     public async Task<ActionResult<Nastamba>> GetNastamba(int id)
     {
         var nastamba = await _context.Nastamba
-            .Include(n => n.Jedinke)
-            .Include(n => n.Skupine)
+            .Include(n => n.Jedinke).ThenInclude(j => j.Vrsta)
+            .Include(n => n.Skupine).ThenInclude(s => s.Vrsta)
+            .Include(n => n.Predmeti)
             .FirstOrDefaultAsync(n => n.ID_nastambe == id);
 
         if (nastamba == null) return NotFound();

@@ -27,9 +27,23 @@ public class TroskoviController : ControllerBase
     [HttpGet("Najskuplje")]
     public async Task<IActionResult> Najskuplje([FromQuery] int top = 5)
     {
-        var rezultat = await _costsService
-            .NajskupljeJedinke(top);   // LINQ GroupBy + Sum
+        var rezultat = await _costsService.NajskupljeJedinke(top);
+        return Ok(rezultat);
+    }
 
+    /// <summary>Troškovi po jedinki – lista svih troškova za danu jedinku.</summary>
+    [HttpGet("Jedinka/{id}")]
+    public async Task<ActionResult<IEnumerable<Trosak>>> TroskoviPoJedinki(int id)
+    {
+        var lista = await _costsService.TroskoviPoJedinkiListaAsync(id);
+        return Ok(lista);
+    }
+
+    /// <summary>Izračun po kategoriji – ukupno i broj zapisa po svakoj kategoriji.</summary>
+    [HttpGet("PoKategoriji")]
+    public async Task<IActionResult> IzracunPoKategoriji()
+    {
+        var rezultat = await _costsService.IzracunPoKategorijiAsync();
         return Ok(rezultat);
     }
 }

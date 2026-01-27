@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 
 namespace Zoo.Models;
 
@@ -14,6 +14,8 @@ public class Radnik
     public int? ID_obrazovanja { get; set; }
     public string? tip_radnika { get; set; }
     public int ID_zoo { get; set; }
+    /// <summary>Kompetencije vodiča / specijalizacije (npr. gmazovi, ptice).</summary>
+    public string? kompetencije { get; set; }
 
     public Obrazovanje? Obrazovanje { get; set; }
     public Zooloski Zoo { get; set; } = null!;

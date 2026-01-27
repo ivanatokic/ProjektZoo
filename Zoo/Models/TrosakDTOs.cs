@@ -16,3 +16,11 @@ public class CostSummaryDto
     public decimal ukupno { get; set; }
     public Dictionary<string, decimal> po_kategorijama { get; set; } = new();
 }
+
+/// <summary>Stavka izračuna po kategoriji (za endpoint PoKategoriji).</summary>
+public class IzracunPoKategorijiItemDto
+{
+    public string kategorija { get; set; } = null!;
+    public decimal ukupno { get; set; }
+    public int broj { get; set; }
+}
