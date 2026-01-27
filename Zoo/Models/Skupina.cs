@@ -15,6 +15,7 @@ public class Skupina
     public DateTime? datum_nabavke { get; set; }
     public decimal? trosak { get; set; }
     public string? tip_troska { get; set; }
+    public bool aktivna { get; set; }
 
     public Vrsta Vrsta { get; set; } = null!;
     public Nastamba Nastamba { get; set; } = null!;
