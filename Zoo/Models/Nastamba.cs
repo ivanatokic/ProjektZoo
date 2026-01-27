@@ -18,6 +18,7 @@ public class Nastamba
     [Required]
     public Geometry oblik { get; set; } = null!;
 
+    [NotMapped]
     public Geometry? koordinate { get; set; }
 
     public ICollection<Jedinka> Jedinke { get; set; } = new List<Jedinka>();
