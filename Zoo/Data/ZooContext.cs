@@ -21,6 +21,7 @@ public class ZooContext : DbContext
     public DbSet<Raspored> Raspored { get; set; } = null!;
     public DbSet<Skupina> Skupina { get; set; } = null!;
     public DbSet<Tura> Tura { get; set; } = null!;
+    public DbSet<Dogadaj> Dogadaj { get; set; } = null!;
     public DbSet<Vrsta> Vrsta { get; set; } = null!;
     public DbSet<Zooloski> Zooloski { get; set; } = null!;
     public DbSet<Trosak> Troskovi { get; set; } = null!;
@@ -89,6 +90,11 @@ public class ZooContext : DbContext
             .HasOne(t => t.Vodic)
             .WithMany(r => r.Ture)
             .HasForeignKey(t => t.ID_vodica);
+
+        modelBuilder.Entity<Dogadaj>()
+            .HasOne(d => d.Tura)
+            .WithMany(t => t.Dogadaji)
+            .HasForeignKey(d => d.ID_ture);
 
         modelBuilder.Entity<Radnik>()
             .HasOne(r => r.Obrazovanje)

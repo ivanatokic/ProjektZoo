@@ -21,4 +21,7 @@ public class Tura
     public string status { get; set; } = "planirana";
 
     public Radnik? Vodic { get; set; }
+
+    /// <summary>Događaji povezani s ovom turom (za prikaz u kalendaru).</summary>
+    public ICollection<Dogadaj> Dogadaji { get; set; } = new List<Dogadaj>();
 }

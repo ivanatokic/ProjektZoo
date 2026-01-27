@@ -92,6 +92,15 @@ VALUES
 ('2025-11-17 09:00:00', '2025-11-17 11:00:00', 30, 4, N'Obilazak krokodila i drugih gmazova', 1, N'planirana');
 GO
 
+-- 12b) Dogadaj (kalendar događaja – show lavova, specijalne ture, radionice)
+INSERT INTO dbo.Dogadaj (naziv, opis, pocetak, kraj, tip, ID_ture)
+VALUES
+(N'Show lavova', N'Prezentacija hranjenja lavova s vodičem', '2025-11-18 11:00:00', '2025-11-18 11:30:00', N'show', 1),
+(N'Ptice grabljivice', N'Poseban show vrana i drugih ptica', '2025-11-19 15:00:00', '2025-11-19 15:45:00', N'show', 2),
+(N'Noćni obilazak krokodila', N'Specijalna večernja tura s vodičem', '2025-11-20 20:00:00', '2025-11-20 21:30:00', N'specijalna tura', 3),
+(N'Dječja radionica: upoznaj žabe', N'Radionica za djecu u bazenu s žabama', '2025-11-21 10:00:00', '2025-11-21 11:00:00', N'radionica', NULL);
+GO
+
 -- 13) Incident
 INSERT INTO dbo.Incident (datum, opis, razina_zivotinje, razina_nastambe, trosak_popravka)
 VALUES

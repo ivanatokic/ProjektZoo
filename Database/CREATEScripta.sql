@@ -99,6 +99,16 @@ CREATE TABLE Tura (
     opis NVARCHAR(MAX)
 );
 
+CREATE TABLE Dogadaj (
+    ID_dogadaja INT IDENTITY(1,1) PRIMARY KEY,
+    naziv NVARCHAR(100) NOT NULL,
+    opis NVARCHAR(MAX) NULL,
+    pocetak DATETIME2 NOT NULL,
+    kraj DATETIME2 NULL,
+    tip NVARCHAR(50) NULL,
+    ID_ture INT NULL FOREIGN KEY REFERENCES Tura(ID_ture)
+);
+
 CREATE TABLE Incident (
     ID_incidenta INT IDENTITY(1,1) PRIMARY KEY,
     datum DATE NOT NULL,
