@@ -40,10 +40,6 @@ public class ZooContext : DbContext
             .Property(n => n.oblik)
             .HasColumnType("geometry");
 
-        modelBuilder.Entity<Nastamba>()
-            .Property(n => n.koordinate)
-            .HasColumnType("geometry");
-
         modelBuilder.Entity<Jedinka>()
             .HasOne(j => j.Vrsta)
             .WithMany(v => v.Jedinke)
