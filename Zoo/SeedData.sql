@@ -21,35 +21,19 @@ VALUES
 (N'Odgajatelj životinja', 0);
 GO
 
--- 4) Oblik
-INSERT INTO dbo.Oblik (naziv, broj_stranica)
+-- 4-6) Nastamba (geometrija oblik + opcionalne koordinate)
+INSERT INTO dbo.Nastamba (oznaka, opis, sijencenje, Oblik, Koordinate)
 VALUES
-('Pravokutnik', 4),
-('Kvadrat', 4);
-GO
-
--- 5) DimenzijaOblika
--- Oblik 1: Pravokutnik (2 dimenzije)
-INSERT INTO dbo.DimenzijaOblika (ID_oblika, redni_broj, duljina)
-VALUES
-(1, 1, 100),
-(1, 2, 50);
-GO
-
--- Oblik 2: Kvadrat (1 dimenzija)
-INSERT INTO dbo.DimenzijaOblika (ID_oblika, redni_broj, duljina)
-VALUES
-(2, 1, 50);
-GO
-
--- 6) Nastamba (sad koristi ID_oblika, jer ti Nastamba nema geometrija kolonu)
-INSERT INTO dbo.Nastamba (oznaka, opis, sjenčenje, ID_oblika)
-VALUES
-(N'A1', N'Prostor za lava s drvenim platformama i stijenama', N'djelomično', 1),
-(N'B2', N'Prostor za vrane s granama i kavezom', N'puno', 2),
-(N'C1', N'Akvarij za zlatne ribice s filtracijom i biljkama', N'puno', 2),
-(N'D1', N'Bazen za žabe s malim jezerom i kamenjem', N'djelomično', 2),
-(N'E1', N'Otok za krokodile s bazenom i kopnenim dijelom', N'puno', 1);
+(N'A1', N'Prostor za lava s drvenim platformama i stijenama', N'djelomično',
+ geometry::STGeomFromText('POLYGON((0 0, 20 0, 20 10, 0 10, 0 0))', 0), NULL),
+(N'B2', N'Prostor za vrane s granama i kavezom', N'puno',
+ geometry::STGeomFromText('POLYGON((0 0, 15 0, 15 8, 0 8, 0 0))', 0), NULL),
+(N'C1', N'Akvarij za zlatne ribice s filtracijom i biljkama', N'puno',
+ geometry::STGeomFromText('POLYGON((0 0, 10 0, 10 5, 0 5, 0 0))', 0), NULL),
+(N'D1', N'Bazen za žabe s malim jezerom i kamenjem', N'djelomično',
+ geometry::STGeomFromText('POLYGON((0 0, 12 0, 12 6, 0 6, 0 0))', 0), NULL),
+(N'E1', N'Otok za krokodile s bazenom i kopnenim dijelom', N'puno',
+ geometry::STGeomFromText('POLYGON((0 0, 25 0, 25 15, 0 15, 0 0))', 0), NULL);
 GO
 
 -- 7) Radnik (pretpostavka: Obrazovanje ID 1..2 i Zooloski ID 1)

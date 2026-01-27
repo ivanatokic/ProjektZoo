@@ -8,7 +8,9 @@ builder.Services.AddControllers();
 
 // DbContext
 builder.Services.AddDbContext<ZooContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ZooDb")));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("ZooDb"),
+        sqlOptions => sqlOptions.UseNetTopologySuite()));
 
 // CORS – dozvola za frontend
 builder.Services.AddCors(options =>
